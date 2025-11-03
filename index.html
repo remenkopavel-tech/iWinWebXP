@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>iWin Web XP</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div id="desktop" class="desktop">
+    <div id="icons" class="icons">
+      <div class="icon" data-app="fileExplorer"><div class="ico">F</div><div class="label" data-i18n="Files">Файли</div></div>
+      <div class="icon" data-app="notepad"><div class="ico">N</div><div class="label" data-i18n="Notepad">Блокнот</div></div>
+      <div class="icon" data-app="paint"><div class="ico">P</div><div class="label" data-i18n="Paint">Paint</div></div>
+    </div>
+
+    <div id="windows" class="windows"></div>
+
+    <div id="taskbar" class="taskbar">
+      <button id="startBtn" class="start-btn"><span class="start-circle"></span><span data-i18n="Start">Пуск</span></button>
+      <div id="task-items" class="task-items"></div>
+      <div class="time" id="time"></div>
+    </div>
+
+    <div id="startMenu" class="start-menu hidden">
+      <div class="start-list">
+        <button class="start-item" data-action="open" data-app="notepad" data-i18n="Notepad">Блокнот</button>
+        <button class="start-item" data-action="open" data-app="paint" data-i18n="Paint">Paint</button>
+        <button class="start-item" data-action="open" data-app="calculator" data-i18n="Calculator">Калькулятор</button>
+        <hr>
+        <button class="start-item" id="addHome">Додати на головний екран</button>
+      </div>
+    </div>
+
+  </div>
+
+  <template id="window-template">
+    <div class="win">
+      <div class="titlebar">
+        <div class="title">Window</div>
+        <div class="controls">
+          <button class="min">—</button>
+          <button class="max">▢</button>
+          <button class="close">×</button>
+        </div>
+      </div>
+      <div class="content"></div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
